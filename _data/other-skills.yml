@@ -1,0 +1,11 @@
+- name: Unity
+  percentage: 80
+  color: success
+
+- name: Figma
+  percentage: 60
+  color: info
+
+- name: Photoshop
+  percentage: 100
+  color: light
