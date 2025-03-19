@@ -7,25 +7,23 @@ description: Puzzle Odyssey is an immersive word puzzle game that combines chall
 
 # Overview of the Project:
 
-This is my first game project where I created a Tetris-like game in Unity. Key features I implemented include:
+Puzzle Odyssey is a captivating word puzzle game that challenges players to discover hidden words by connecting letters across a grid. The game blends immersive gameplay with visually appealing landscapes and calming soundtracks, creating a relaxing yet mentally stimulating experience. It caters to puzzle enthusiasts who seek entertainment while enhancing their vocabulary and cognitive skills.
 
-- Block Movement & Rotation: Blocks move left, right, and rotate with arrow keys. They fall automatically with adjustable speed.
-- Grid Management: A 10x20 grid stores blocks, and I check if new block positions are valid.
-- Line Clearing: Filled lines are cleared, and score points are added when lines are removed.
-- Game Over: When blocks reach the top, the game ends, and the score is displayed.
-- Score & High Scores: Player’s score is saved, and high scores are managed using PlayerPrefs.
-- UI: Created a Game Over UI to display the player's score.
+- **Challenging Word Puzzles**: Players swipe through letters to form meaningful words, progressing through levels of increasing difficulty.
+- **Cross-Platform Availability**: Launched on both iOS and Android, ensuring a seamless experience across devices.
+- **In-App Purchases (IAP)**: Monetization enabled through purchasable hints, level unlocks, and ad-free options using Unity IAP.
+- **In-App Reviews Integration**: Incorporated user feedback mechanism to prompt in-game reviews, boosting app visibility and credibility.
+- **Word Formation Mechanics**: Implemented Line Renderer with Collider2D to detect swipes and accurately form words from letter grids.
 
 ![preview](https://i.imgur.com/PnVI2Qr.png)
 
 ## What I Learned:
-- **C# scripting in Unity:** Gained experience working with Unity's scripting system to create game mechanics, logic, and interactions.
-- **Grid-based game design:** Understood how to manage a grid of cells for something like Tetris, where each cell can either be empty or occupied by part of a block.
-- **Game Design Fundamentals:** Learned how to handle user input, update game states, and create meaningful interactions (such as clearing lines, adding scores, and handling game-over scenarios).
-
+- **Advanced Unity Game Development Techniques:** Implemented game logic efficiently to manage level progression and word validation.
+- **In-App Purchases (IAP) Integration:** Gained expertise in managing consumable and non-consumable purchases, ensuring a smooth and secure transaction process.
+- **In-App Reviews Implementation:** Integrated Google Play and App Store in-app review prompts to encourage user feedback.
+- **Persistent Data Management:** Utilized PlayerPrefs to save user progress, game settings, and high scores across sessions.
 ![search](https://i.imgur.com/Rmey2RW.png)
 
-external link : https://play.google.com/store/apps/details?id=com.Sector4Interactive.PuzzleOdyssey&hl=en_IN
 <p class="text-center">
-  {% include elements/button.html link="https://github.com/AjithKumarkk/Tetris-2D" text="Download" %}
+  {% include elements/button.html link="https://play.google.com/store/apps/details?id=com.Sector4Interactive.PuzzleOdyssey&hl=en_IN" text="Download" %}
 </p>
