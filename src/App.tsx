@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { ThemeProvider, CssBaseline, Box } from '@mui/material';
+import { AnimatePresence } from 'framer-motion';
+import { gameTheme } from './theme/gameTheme';
+import Navigation from './components/Navigation';
+import Prologue from './pages/Prologue';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
-function App() {
+// Wrapper component to handle page transitions
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimatePresence mode="wait">
+      <Box sx={{ pt: '64px' }}> {/* Add padding to account for fixed navbar */}
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Prologue />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </Box>
+    </AnimatePresence>
   );
-}
+};
+
+const App = () => {
+  return (
+    <ThemeProvider theme={gameTheme}>
+      <CssBaseline />
+      <Router>
+        <Navigation />
+        <AnimatedRoutes />
+      </Router>
+    </ThemeProvider>
+  );
+};
 
 export default App;
