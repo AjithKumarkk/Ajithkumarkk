@@ -7,42 +7,48 @@ import { pageVariants, containerVariants, itemVariants, glowVariants, scanlineEf
 const Resume = () => {
   const experiences = [
     {
-      title: 'Game Developer',
-      company: 'Epic Games Studio',
-      period: '2021 - Present',
+      title: 'Unity Developer',
+      company: 'Sector4 Interactive',
+      period: 'Feb 2024 - Present',
       icon: <SportsEsports />,
       responsibilities: [
-        'Developed and optimized game mechanics using Unreal Engine',
-        'Implemented advanced character animation systems',
-        'Collaborated with artists and designers to create immersive gameplay experiences',
+        'Designed and developed engaging mobile game using Unity 2D and C#',
+        'Collaborated with artists and designers to create visually appealing game assets and user interface',
+        'Implemented game mechanics and features to enhance user experience',
+        'Implemented Unity IAP and in-app review systems, boosting monetization and user feedback',
+        'Engineered persistent player progress using PlayerPrefs, ensuring seamless experiences across game sessions and scenes',
+        'Created and maintained technical documentation for game development process',
+        'Conducted thorough testing and debugging to ensure high quality game performance'
       ],
     },
     {
-      title: 'Unity Developer',
-      company: 'Indie Game Studio',
-      period: '2020 - 2021',
-      icon: <Code />,
+      title: 'Junior Data Analyst',
+      company: 'Stratagile Pvt Ltd',
+      period: 'Dec 2020 - Oct 2023',
+      icon: <Speed />,
       responsibilities: [
-        'Created mobile games using Unity and C#',
-        'Designed and implemented game UI systems',
-        'Optimized game performance for mobile platforms',
+        'Extracted and interpreted data patterns to translate findings into actionable outcomes',
+        'Worked with business intelligence software and various reports to glean insights into trends and prospects',
+        'Identified, analyzed and interpreted trends or patterns in complex data sets',
+        'Used statistical methods to analyze data and generate useful business reports'
       ],
     },
   ];
 
   const education = [
     {
-      degree: 'Bachelor of Science in Game Development',
-      institution: 'DigiPen Institute of Technology',
+      degree: 'B.Tech in Computer Science and Engineering',
+      institution: 'Rajadhani Institute of Science and Technology',
+      university: 'APJ Abdul Kalam Technological University',
       period: '2016 - 2020',
       icon: <School />,
-      details: 'Specialized in game programming and interactive simulation. Created multiple game projects as part of the curriculum.',
+      details: 'Specialized in Computer Science and Engineering, focusing on programming fundamentals, data structures, and software development.',
     },
   ];
 
   const skills = {
-    technical: ['Unity', 'Unreal Engine', 'C#', 'C++', 'Game Design', 'DirectX', 'OpenGL'],
-    soft: ['Problem Solving', 'Team Leadership', 'Project Management', 'Game Optimization'],
+    technical: ['Unity 2D', 'C#', 'Game Development', 'Data Analysis', 'Business Intelligence', 'Statistical Analysis', 'Unity IAP', 'PlayerPrefs'],
+    soft: ['Problem Solving', 'Team Collaboration', 'Technical Documentation', 'Data Interpretation', 'Testing & Debugging', 'Project Management'],
   };
 
   const handleDownloadResume = () => {
@@ -403,4 +409,4 @@ const Resume = () => {
   );
 };
 
-export default Resume; 
+export default Resume;

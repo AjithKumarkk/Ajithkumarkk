@@ -18,8 +18,12 @@ const AnimatedRoutes = () => {
       <Box sx={{ pt: '64px' }}> {/* Add padding to account for fixed navbar */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Prologue />} />
+          <Route path="/ajithkumar" element={<Prologue />} />
+          <Route path="/ajithkumar/portfolio" element={<Portfolio />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/ajithkumar/contact" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ajithkumar/resume" element={<Resume />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
       </Box>
@@ -28,10 +32,12 @@ const AnimatedRoutes = () => {
 };
 
 const App = () => {
+  const basename = process.env.NODE_ENV === 'development' ? '/' : '/ajithkumar';
+  
   return (
     <ThemeProvider theme={gameTheme}>
       <CssBaseline />
-      <Router>
+      <Router basename={basename}>
         <Navigation />
         <AnimatedRoutes />
       </Router>
