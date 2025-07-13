@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Paper, Box, Divider, List, ListItem, ListItemText, Button } from '@mui/material';
+import { Container, Typography, Paper, Box, Divider, List, ListItem, ListItemText, Button, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 import { SportsEsports, Code, Speed, School, Download } from '@mui/icons-material';
 import { pageVariants, containerVariants, itemVariants, glowVariants, scanlineEffect } from '../animations/pageTransitions';
@@ -321,14 +321,15 @@ const Resume = () => {
                   </Typography>
                   <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                     {skills.technical.map((skill, index) => (
-                      <Typography
+                      <Chip
                         key={index}
+                        label={skill}
                         sx={{
                           backgroundColor: 'rgba(78, 204, 163, 0.1)',
                           color: 'primary.light',
                           px: 2,
                           py: 1,
-                          borderRadius: '4px',
+                          borderRadius: '16px', // More rounded corners
                           border: '1px solid rgba(78, 204, 163, 0.3)',
                           transition: 'all 0.3s ease',
                           '&:hover': {
@@ -337,9 +338,7 @@ const Resume = () => {
                             backgroundColor: 'rgba(78, 204, 163, 0.2)',
                           },
                         }}
-                      >
-                        {skill}
-                      </Typography>
+                      />
                     ))}
                   </Box>
                 </Paper>
@@ -378,14 +377,15 @@ const Resume = () => {
                   </Typography>
                   <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                     {skills.soft.map((skill, index) => (
-                      <Typography
+                      <Chip
                         key={index}
+                        label={skill}
                         sx={{
                           backgroundColor: 'rgba(78, 204, 163, 0.1)',
                           color: 'primary.light',
                           px: 2,
                           py: 1,
-                          borderRadius: '4px',
+                          borderRadius: '16px', // More rounded corners
                           border: '1px solid rgba(78, 204, 163, 0.3)',
                           transition: 'all 0.3s ease',
                           '&:hover': {
@@ -394,9 +394,7 @@ const Resume = () => {
                             backgroundColor: 'rgba(78, 204, 163, 0.2)',
                           },
                         }}
-                      >
-                        {skill}
-                      </Typography>
+                      />
                     ))}
                   </Box>
                 </Paper>

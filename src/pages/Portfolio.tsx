@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Card, CardContent, CardMedia, Typography, Box, IconButton, Chip, Dialog, DialogTitle, DialogContent, DialogActions, Button, Grid, List, ListItem, ListItemIcon, ListItemText, Divider, ImageList, ImageListItem } from '@mui/material';
 import { motion } from 'framer-motion';
 import { GitHub, Launch, SportsEsports, Code, Devices, Star, CheckCircle } from '@mui/icons-material';
@@ -243,6 +243,10 @@ Persistent Data Management: Utilized PlayerPrefs to save user progress, game set
 ];
 
 const Portfolio = () => {
+  useEffect(() => {
+    document.title = 'Ajith Kumar';
+  }, []);
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [imageError, setImageError] = useState<{[key: string]: boolean}>({});
 
@@ -510,6 +514,7 @@ const Portfolio = () => {
                         backgroundColor: 'rgba(78, 204, 163, 0.2)',
                         color: '#4ecca3',
                         border: '1px solid #4ecca3',
+                        borderRadius: '16px', // More rounded corners
                       }}
                     />
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -522,6 +527,7 @@ const Portfolio = () => {
                             backgroundColor: 'rgba(30, 41, 59, 0.9)',
                             color: '#eeeeee',
                             border: '1px solid rgba(78, 204, 163, 0.3)',
+                            borderRadius: '16px', // More rounded corners
                             '&:hover': {
                               transform: 'translateY(-2px)',
                               boxShadow: '0 0 10px rgba(78, 204, 163, 0.3)',
@@ -698,6 +704,7 @@ const Portfolio = () => {
                           backgroundColor: 'rgba(78, 204, 163, 0.1)',
                           color: '#4ecca3',
                           border: '1px solid rgba(78, 204, 163, 0.3)',
+                          borderRadius: '16px', // More rounded corners
                           '&:hover': {
                             backgroundColor: 'rgba(78, 204, 163, 0.2)',
                           }
