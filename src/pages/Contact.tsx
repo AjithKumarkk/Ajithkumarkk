@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Container,
   Typography,
@@ -12,6 +12,10 @@ import { GitHub, LinkedIn, Email, SportsEsports } from '@mui/icons-material';
 import { pageVariants, containerVariants, itemVariants, glowVariants, scanlineEffect } from '../animations/pageTransitions';
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = 'Ajith Kumar';
+  }, []);
+
   const socialLinks = [
     { icon: <GitHub />, url: 'https://github.com/AjithKumarkk', label: 'GitHub' },
     { icon: <LinkedIn />, url: 'https://linkedin.com/in/ajithkumarkk', label: 'LinkedIn' },

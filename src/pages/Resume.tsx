@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Typography, Paper, Box, Divider, List, ListItem, ListItemText, Button, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 import { SportsEsports, Code, Speed, School, Download } from '@mui/icons-material';
 import { pageVariants, containerVariants, itemVariants, glowVariants, scanlineEffect } from '../animations/pageTransitions';
 
 const Resume = () => {
+  useEffect(() => {
+    document.title = 'Ajith Kumar';
+  }, []);
+
   const experiences = [
     {
       title: 'Unity Developer',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Box, Container, Paper, Avatar } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Code, Storage } from '@mui/icons-material';
@@ -20,6 +20,10 @@ import asepriteIcon from '../assets/icons/aseprite.png';
 // etc...
 
 const Prologue = () => {
+  useEffect(() => {
+    document.title = 'Ajith Kumar';
+  }, []);
+
   const skills = [
     {
       name: 'Programming Languages & Tools',
