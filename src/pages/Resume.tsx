@@ -54,7 +54,8 @@ const Resume = () => {
   const handleDownloadResume = () => {
     // The PDF file should be placed in public/assets/docs/resume.pdf
     const link = document.createElement('a');
-    link.href = '/assets/docs/Ajith_Kumar.pdf';
+    const baseUrl = process.env.NODE_ENV === 'development' ? '' : '/Ajithkumarkk';
+    link.href = `${baseUrl}/assets/docs/Ajith_Kumar.pdf`;
     link.download = 'Ajith_Kumar.pdf'; // Name that will appear when downloading
     document.body.appendChild(link);
     link.click();
