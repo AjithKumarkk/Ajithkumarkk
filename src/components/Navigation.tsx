@@ -11,10 +11,10 @@ const Navigation = () => {
   const isDevelopment = process.env.NODE_ENV === 'development';
 
   const navItems = [
-    { path: isDevelopment ? '/' : '/AjithkumarkkTest', label: 'Home', icon: <SportsEsports /> },
-    { path: isDevelopment ? '/portfolio' : '/AjithkumarkkTest/portfolio', label: 'Projects', icon: <Work /> },
-    { path: isDevelopment ? '/resume' : '/AjithkumarkkTest/resume', label: 'Stats', icon: <Person /> },
-    { path: isDevelopment ? '/contact' : '/AjithkumarkkTest/contact', label: 'Connect', icon: <Mail /> },
+    { path: isDevelopment ? '/' : '/Ajithkumarkk', label: 'Home', icon: <SportsEsports /> },
+    { path: isDevelopment ? '/portfolio' : '/Ajithkumarkk/portfolio', label: 'Projects', icon: <Work /> },
+    { path: isDevelopment ? '/resume' : '/Ajithkumarkk/resume', label: 'Stats', icon: <Person /> },
+    { path: isDevelopment ? '/contact' : '/Ajithkumarkk/contact', label: 'Connect', icon: <Mail /> },
   ];
 
   return (
