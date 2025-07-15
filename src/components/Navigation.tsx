@@ -8,12 +8,13 @@ const Navigation = () => {
   const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isDevelopment = process.env.NODE_ENV === 'development';
 
   const navItems = [
-    { path: '/', label: 'Home', icon: <SportsEsports /> },
-    { path: '/portfolio', label: 'Projects', icon: <Work /> },
-    { path: '/resume', label: 'Stats', icon: <Person /> },
-    { path: '/contact', label: 'Connect', icon: <Mail /> },
+    { path: isDevelopment ? '/' : '/AjithkumarkkTest', label: 'Home', icon: <SportsEsports /> },
+    { path: isDevelopment ? '/portfolio' : '/AjithkumarkkTest/portfolio', label: 'Projects', icon: <Work /> },
+    { path: isDevelopment ? '/resume' : '/AjithkumarkkTest/resume', label: 'Stats', icon: <Person /> },
+    { path: isDevelopment ? '/contact' : '/AjithkumarkkTest/contact', label: 'Connect', icon: <Mail /> },
   ];
 
   return (
